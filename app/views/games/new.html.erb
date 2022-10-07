@@ -1,9 +1,14 @@
-<h1>New game</h1>
+<html>
+    <body>
+        <form> 
+          name <input type="text" name="name"><br/>
+          description <textarea name="description"></textarea><br/>
+          value <input type="number" name="value" step="0.01"><br/>
+          release_date <input type="date" name="release_date"><br/>
+          category <input type="text" name="category"><br/>
 
-<%= render "form", game: @game %>
+          <button type="submit">Criar</button>
 
-<br>
-
-<div>
-  <%= link_to "Back to games", games_path %>
-</div>
+        </form>
+    </body>
+</html>
