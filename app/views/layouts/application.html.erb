@@ -15,6 +15,8 @@
       <body>
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
+        <%= nav_bar brand: "Home", brand_link: root_path %>
+        <%= nav_bar brand: "Games", brand_link: games_path %>
         <%= yield %>
       </body>
     </div>
