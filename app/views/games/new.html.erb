@@ -30,7 +30,14 @@
               </div>
           </div>
 
-          release_date <input type="date" name="game[release_date]"><br/>
+          <div class="row">
+              <div class="col-sm-2">
+                  <div class="form-group">>
+                    <%= form.label :release_date %>
+                    <%= form.date_field :release_date,class:"form-control" %>
+                  </div>
+              </div>
+          </div>
 
           <div class="row">
                 <div class="col-sm-8">
