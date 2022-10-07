@@ -1,14 +1,48 @@
 <html>
     <body>
-        <form> 
-          name <input type="text" name="name"><br/>
-          description <textarea name="description"></textarea><br/>
-          value <input type="number" name="value" step="0.01"><br/>
-          release_date <input type="date" name="release_date"><br/>
-          category <input type="text" name="category"><br/>
+        <%= form_for Produto.create do |form| %>  
+          
+          <div class="row">
+                <div class="col-sm-8">
+                    <div class="form-group">
+                        <%= form.label :name %>
+                        <%= form.text_field :name, class:"form-control" %>
+                    </div>
+                </div>
+            </div>
 
-          <button type="submit">Criar</button>
+          <div class="row">
+              <div class="col-sm-8">
+                  <div class="form-group">
+                      <%= form.label :description : %>
+                      <%= form.text_area :description, class:"form-control", rows:4 %>
+                  </div>
+               </div>
+            </div>
 
-        </form>
+
+          <div class="row">
+              <div class="col-sm-2">
+                  <div class="form-group">>
+                    <%= form.label :value %>
+                    <%= form.number_field :value, step:0.01, class:"form-control" %>
+                  </div>
+              </div>
+          </div>
+
+          release_date <input type="date" name="game[release_date]"><br/>
+
+          <div class="row">
+                <div class="col-sm-8">
+                    <div class="form-group">
+                        <%= form.label :category %>
+                        <%= form.text_field :category, class:"form-control" %>
+                    </div>
+                </div>
+            </div>
+
+          <%= form.submit "Criar",class:"btn btn-primary" %>
+
+        <% end %>
     </body>
 </html>

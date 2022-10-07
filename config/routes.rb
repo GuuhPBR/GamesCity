@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+    post "games", to: "games#create"
     get "games/new",to: "games#new" 
     root to: "games#index"
 end
