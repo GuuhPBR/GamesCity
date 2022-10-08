@@ -13,6 +13,7 @@
       </head>
 
       <body>
+<<<<<<< HEAD
       <%= nav_bar brand: "Games", brand_link: root_url do %>
         <%= menu_group do %> 
           <% menu_item "Create new game", games_new_path %>
@@ -29,6 +30,11 @@
           <p class="alert"><%= alert %></p>
           <%= yield %>
         </div>
+=======
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
+>>>>>>> 576f7f995c927bbffc00c7d06de904a1a14c1dde
       </body>
     </div>
 </html>
