@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
-    post "games", to: "games#create"
-    get "games/new",to: "games#new" 
-    root to: "games#index"
-end
+  get "games/search", to: "games#search", as: :search_game
   devise_for :users
   resources :games
-  root "welcome#index"
+  root to: "welcome#index"
 end

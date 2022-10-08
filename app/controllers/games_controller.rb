@@ -56,6 +56,11 @@ class GamesController < ApplicationController
       format.html { redirect_to games_url, notice: "Game was successfully destroyed." }
       format.json { head :no_content }
     end
+
+    def search
+        @name = params [:name]
+        @game = Games.where "name like ?", "%#{@name}%"
+    end
   end
 
   private
